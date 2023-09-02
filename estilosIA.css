@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    height: 100vh;
+    width: 15%;
+    background-color: #007BFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px 0;
+    text-align: left;
+    z-index: 1; /* Ajustamos la capa para que no tape el footer */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+.main-content {
+    margin-left: 17%;
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Estilo para las etiquetas de categoría y cursos */
+.curso {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Al pasar el cursor sobre un curso, agrega una pequeña elevación y un efecto de sombra */
+.curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Al seleccionar francés o inglés, muestra solo los cursos correspondientes */
+#selector_frances:checked ~ #frances .curso {
+    display: block;
+}
+
+#selector_ingles:checked ~ #ingles .curso {
+    display: block;
+}
+
+/* Modificaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+#frances, #ingles {
+    display: none; /* Esconde inicialmente ambos conjuntos de cursos */
+}
+
+#selector_frances:checked ~ #frances {
+    display: block; /* Muestra solo los cursos de francés cuando su checkbox está seleccionado */
+}
+
+#selector_ingles:checked ~ #ingles {
+    display: block; /* Muestra solo los cursos de inglés cuando su checkbox está seleccionado */
+}
+
+label[for="selector_frances"], label[for="selector_ingles"] {
+    display: inline-block;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.curso-sugerido {
+    background-color: #e74c3c;
+    color: white;
+    border: 2px solid #c0392b; /* Agrega un borde para resaltar el curso sugerido */
+    padding: 15px; /* Ajusta el espaciado interno */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    margin-bottom: 15px; /* Agrega espacio entre cursos */
+}
+
+.imagenes-ocultas {
+    display: none;
+    margin-top: 20px;
+}

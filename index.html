@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de Idiomas IA</title>
+    <link rel="stylesheet" href="estilosIA.css">
+    <style>
+        /* Estilos para las imágenes ocultas */
+        .imagenes-ocultas {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .actividad:target .imagenes-ocultas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cursos Online</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="acercaDeLaEmpresa.html">Quiénes Somos</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Cursos Sugeridos</h2>
+
+            <!-- Ejemplo de Cursos Sugeridos -->
+            <div class="curso-sugerido">
+                <h3>Francés Básico</h3>
+                <p><a href="programas/CursoFrances1.pdf" download>Ver programa del curso</a></p>
+            </div>
+
+            <div class="curso-sugerido">
+                <h3>Inglés Intermedio</h3>
+                <p><a href="programas/CursoIngles2.pdf" download>Ver programa del curso</a></p>
+            </div>
+
+            <section class="actividad" id="actividad1">
+                <h2>ACTIVIDAD 1 - PROYECTO DE SOFTWARE</h2>
+                <a href="https://drive.google.com/drive/folders/13P-YuqC85Mdh1MfHdWmSR1iy9yD6CCaR?usp=drive_link" class="enlace-video">Ver video de la actividad</a>
+                <a href="#actividad1" class="boton-consigna">CONSIGNA TP1</a>
+                
+                <!-- Imágenes ocultas -->
+                <div class="imagenes-ocultas">
+                    <img src="images/Consigna1.png" alt="Imagen 1">
+                    <img src="images/Consigna2.png" alt="Imagen 2">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        Instituto de Idiomas IA - Todos los derechos reservados © 2023
+    </footer>
+
+</body>
+
+</html>

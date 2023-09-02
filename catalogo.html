@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+<header>
+    <h1>Cursos Online</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acercaDeLaEmpresa.html">Quiénes Somos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="main-content">
+
+        <h2>Catálogo de Cursos</h2>
+
+        <!-- Checkbox para francés -->
+        <input type="checkbox" id="selector_frances" style="display: none;">
+        <label for="selector_frances">Francés</label>
+
+        <!-- Cursos de francés -->
+        <div id="frances">
+            <div class="curso">
+                Curso básico de Francés
+                <a href="programas/frances_basico.pdf" download>Descargar programa</a>
+            </div>
+            <div class="curso">
+                Curso intermedio de Francés
+                <a href="programas/frances_intermedio.pdf" download>Descargar programa</a>
+            </div>
+            <div class="curso">
+                Curso avanzado de Francés
+                <a href="programas/frances_avanzado.pdf" download>Descargar programa</a>
+            </div>
+        </div>
+
+        <!-- Checkbox para inglés -->
+        <input type="checkbox" id="selector_ingles" style="display: none;">
+        <label for="selector_ingles">Inglés</label>
+
+        <!-- Cursos de inglés -->
+        <div id="ingles">
+            <div class="curso">
+                Curso básico de Inglés
+                <a href="programas/ingles_basico.pdf" download>Descargar programa</a>
+            </div>
+            <div class="curso">
+                Curso intermedio de Inglés
+                <a href="programas/ingles_intermedio.pdf" download>Descargar programa</a>
+            </div>
+            <div class="curso">
+                Curso avanzado de Inglés
+                <a href="programas/ingles_avanzado.pdf" download>Descargar programa</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Cursos Online &copy; 2023
+    </footer>
+
+</div>
+
+</body>
+</html>
